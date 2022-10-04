@@ -1,0 +1,12 @@
+<Common point>
+- Both of them use "Transaction" module from solana/web3.js
+  (Despite Solana Game pretending to use a different module, workerRPC. Going through workerRPC, I encountered "Transaction" module.)
+
+<Different point>
+- Process after creating transaction
+  - Solana Game uses "postMessage" made in solana-labs
+  - Hello World uses "sendAndConfirmTransaction" from solana/web3.js
+- argument in transaction
+  - Solana Game requires secretKey
+  - Hello World consistently uses publicKey for transaction, rather than privateKey.
+  
